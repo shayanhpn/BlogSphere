@@ -1,28 +1,7 @@
 <x-dash-layout>
     <div class="container">
         <div class="page-inner">
-            <div class="page-header">
-                <h3 class="fw-bold mb-3">Forms</h3>
-                <ul class="breadcrumbs mb-3">
-                    <li class="nav-home">
-                        <a href="#">
-                            <i class="icon-home"></i>
-                        </a>
-                    </li>
-                    <li class="separator">
-                        <i class="icon-arrow-right"></i>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Forms</a>
-                    </li>
-                    <li class="separator">
-                        <i class="icon-arrow-right"></i>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Basic Form</a>
-                    </li>
-                </ul>
-            </div>
+        {{--            BreadCrumb Section--}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
