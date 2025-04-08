@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DeleteUserController;
 use App\Http\Controllers\Admin\RegisterUserController;
+use App\Http\Controllers\Admin\ShowAllUsersController;
 use App\Http\Controllers\Admin\UpdateUserController;
 use App\Http\Controllers\Admin\ViewUserController;
 use Illuminate\Support\Facades\Route;
@@ -34,3 +35,5 @@ Route::put('/user/edit/{user}',[UpdateUserController::class,'updateUser'])->name
 Route::get('/user/delete/{user}',[DeleteUserController::class,'showDeleteUserForm'])->name('show-delete-user');
 // Delete User
 Route::delete('/user/delete/{user}',[DeleteUserController::class,'deleteUser'])->name('delete-user');
+
+Route::get('/users',[ShowAllUsersController::class,'showAllUsers'])->name('show-all-users');
