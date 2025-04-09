@@ -14,6 +14,6 @@ class DeleteUserController extends Controller
     }
     public function deleteUser(User $user){
         $user->delete();
-        return redirect('/users')->with('danger','User has been deleted');
+        return redirect('/users')->with('danger',"User <strong>{$user->first_name}</strong> has been deleted");
     }
 }

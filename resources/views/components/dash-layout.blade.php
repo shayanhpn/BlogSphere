@@ -715,7 +715,7 @@
                 @if(session()->has('success') || session()->has('danger'))
                     <div class="alert alert-{{session()->has('success') ? 'success' : 'danger'}} d-flex align-items-center" role="alert">
                         <div>
-                            {{session('success') ? session('success') : session('danger')}}
+                            {!! session('success') ? session('success') : session('danger')  !!}
                         </div>
                     </div>
                 @endif
