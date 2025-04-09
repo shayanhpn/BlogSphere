@@ -22,7 +22,7 @@ class RegisterUserController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
         User::create($data);
-        return 'Done!!';
+        return redirect('/register')->with('success', 'You have been registered successfully');
 
     }
 }

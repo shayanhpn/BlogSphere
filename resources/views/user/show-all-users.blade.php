@@ -20,7 +20,7 @@
                             <td>{{$user->last_name}}</td>
                             <td>{{$user->username}}</td>
                             <td>{{$user->email}}</td>
-                            <td><a href="{{route('view-user',$user->id)}}" class="btn btn-primary">View</a><button class="btn btn-danger mx-2">Delete</button></td>
+                            <td><a href="{{route('view-user',$user->id)}}" class="btn btn-primary">View</a><a href="{{route('show-delete-user',$user->id)}}" class="btn btn-danger mx-2">Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>

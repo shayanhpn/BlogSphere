@@ -712,6 +712,13 @@
 
         <div class="container">
             <div class="page-inner">
+                @if(session()->has('success') || session()->has('danger'))
+                    <div class="alert alert-{{session()->has('success') ? 'success' : 'danger'}} d-flex align-items-center" role="alert">
+                        <div>
+                            {{session('success') ? session('success') : session('danger')}}
+                        </div>
+                    </div>
+                @endif
                 {{$slot}}
             </div>
         </div>
@@ -934,7 +941,7 @@
 <script src="{{asset('dashboard/assets/js/plugin/datatables/datatables.min.js')}}"></script>
 
 <!-- Bootstrap Notify -->
-<script src="{{asset('dashboard/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
+{{--<script src="{{asset('dashboard/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js')}}"></script>--}}
 
 <!-- jQuery Vector Maps -->
 <script src="{{asset('dashboard/assets/js/plugin/jsvectormap/jsvectormap.min.js')}}"></script>

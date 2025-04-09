@@ -15,7 +15,9 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-lg btn-danger">DELETE</button>
+                                    <a href="{{route('show-all-users')}}" class="btn btn-lg btn-warning">Back</a>
                                 </form>
+
                             </div>
                         </div>
                     </div>
