@@ -21,7 +21,8 @@ class RegisterUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-        User::create($data);
+        $user = User::create($data);
+        auth()->login($user);
         return redirect('/register')->with('success', 'You have been registered successfully');
 
     }
