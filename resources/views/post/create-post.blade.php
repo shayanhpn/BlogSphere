@@ -10,14 +10,15 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <form action="{{ route('create-post') }}" method="POST">
+                                <form action="{{ route('create-post') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('POST')
                                     <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Title" name="title">
                                     </div>
                                     <textarea name="body" id="body" class="form-control my-3" rows="10" placeholder="Write Text Here..."></textarea>
-                                    <button class="btn btn-primary" type="submit">Create Post</button>
+                                    <input class="form-control" type="file" name="post_image">
+                                    <button class="btn btn-primary mt-3" type="submit">Create Post</button>
                                 </form>
                             </div>
                         </div>
