@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\ViewUserController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Post\CreatePostController;
+use App\Http\Controllers\Post\ShowAllPostController;
+use App\Http\Controllers\Post\ShowSinglePostController;
 use Illuminate\Support\Facades\Route;
 use function Pest\Laravel\get;
 
@@ -70,3 +72,7 @@ Route::post('/logout',[AuthenticateUserController::class,'logoutUser'])->name('l
 
 Route::get('/create-post',[CreatePostController::class,'showCreatePost'])->name('show-create-post')->middleware('auth');
 Route::post('/create-post',[CreatePostController::class,'createPost'])->name('create-post')->middleware('auth');
+
+Route::get('/posts',[ShowAllPostController::class,'showPosts'])->name('show-posts');
+
+Route::get('/post/{post}',[ShowSinglePostController::class,'showSinglePost'])->name('show.single.post');
